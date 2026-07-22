@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VALLA | Handmade Lighting Studio</title>
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Georgia,serif;
+}
+
+
+body{
+background:#0d0d0d;
+color:#f5eee4;
+}
+
+
+header{
+height:90px;
+background:#090909;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 8%;
+position:fixed;
+width:100%;
+top:0;
+z-index:10;
+border-bottom:1px solid #3b3025;
+}
+
+
+.logo{
+font-size:36px;
+letter-spacing:12px;
+color:#d8b27c;
+}
+
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+}
+
+
+.lang button{
+background:none;
+border:1px solid #d8b27c;
+color:#d8b27c;
+padding:7px 12px;
+cursor:pointer;
+}
+
+
+
+.hero{
+
+height:100vh;
+
+background:
+linear-gradient(
+rgba(0,0,0,.55),
+rgba(0,0,0,.75)
+),
+url("https://images.unsplash.com/photo-1507473885765-e6ed057f782c");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+
+}
+
+
+.hero h1{
+
+font-size:100px;
+letter-spacing:30px;
+color:#d8b27c;
+
+}
+
+
+.hero p{
+
+font-size:25px;
+margin:35px;
+
+}
+
+
+
+.button{
+
+background:#d8b27c;
+color:#111;
+padding:18px 45px;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+
+}
+
+
+section{
+
+padding:100px 10%;
+text-align:center;
+
+}
+
+
+.title{
+
+font-size:50px;
+color:#d8b27c;
+margin-bottom:40px;
+
+}
+
+
+.story{
+
+max-width:850px;
+margin:auto;
+font-size:20px;
+line-height:1.8;
+color:#ddd;
+
+}
+
+
+.products{
+
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+
+}
+
+
+.card{
+
+width:320px;
+background:#151515;
+border:1px solid #33291f;
+transition:.4s;
+cursor:pointer;
+
+}
+
+
+.card:hover{
+
+transform:translateY(-15px);
+border-color:#d8b27c;
+
+}
+
+
+.card img{
+
+width:100%;
+height:350px;
+object-fit:cover;
+
+}
+
+
+.card h3{
+
+font-size:30px;
+color:#d8b27c;
+margin:25px;
+
+}
+
+
+.card p{
+
+color:#ccc;
+padding-bottom:30px;
+
+}
+
+
+.product{
+
+display:none;
+background:#151515;
+border:1px solid #33291f;
+padding:50px;
+margin-top:50px;
+
+}
+
+
+.product img{
+
+width:400px;
+max-width:100%;
+
+}
+
+
+.product h2{
+
+font-size:45px;
+color:#d8b27c;
+margin:30px;
+
+}
+
+
+.product p{
+
+font-size:19px;
+line-height:1.8;
+color:#ddd;
+
+}
+
+
+.gold{
+
+color:#d8b27c;
+
+}
+
+
+.order{
+
+display:inline-block;
+margin-top:30px;
+background:#d8b27c;
+color:#111;
+padding:15px 40px;
+border-radius:40px;
+text-decoration:none;
+
+}
+
+
+.features{
+
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+
+}
+
+
+.feature{
+
+background:#151515;
+border:1px solid #33291f;
+padding:35px;
+width:280px;
+
+}
+
+
+.feature h3{
+
+color:#d8b27c;
+font-size:25px;
+margin-bottom:15px;
+
+}
+
+
+.gallery{
+
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+
+}
+
+
+.gallery img{
+
+width:250px;
+height:250px;
+object-fit:cover;
+
+}
+
+
+footer{
+
+background:#080808;
+padding:40px;
+text-align:center;
+color:#d8b27c;
+
+}
+
+
+.hidden{
+display:none;
+}
+
+
+@media(max-width:700px){
+
+.hero h1{
+
+font-size:55px;
+letter-spacing:15px;
+
+}
+
+
+nav{
+
+display:none;
+
+}
+
+}
+
+
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<header>
+
+
+<div class="logo">
+VALLA
+</div>
+
+
+<nav>
+
+<a href="#collection">
+
+<span class="sr">Kolekcija</span>
+<span class="en hidden">Collection</span>
+
+</a>
+
+
+<a href="#contact">
+
+<span class="sr">Kontakt</span>
+<span class="en hidden">Contact</span>
+
+</a>
+
+
+</nav>
+
+
+
+
+<div class="lang">
+
+<button onclick="changeLanguage('sr')">
+SR
+</button>
+
+<button onclick="changeLanguage('en')">
+EN
+</button>
+
+</div>
+
+
+</header>
+
+
+
+
+
+
+<section class="hero">
+
+
+<div>
+
+
+<h1>
+VALLA
+</h1>
+
+
+
+<p class="sr">
+
+Ručno izrađene lampe za posebne prostore.
+
+</p>
+
+
+
+<p class="en hidden">
+
+Handcrafted lighting for extraordinary spaces.
+
+</p>
+
+
+
+
+<a class="button" href="#collection">
+
+
+<span class="sr">
+Istraži kolekciju
+</span>
+
+
+<span class="en hidden">
+Explore collection
+</span>
+
+
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section>
+
+
+<h2 class="title">
+
+
+<span class="sr">
+Naša priča
+</span>
+
+
+<span class="en hidden">
+Our Story
+</span>
+
+
+</h2>
+
+
+
+
+<p class="story sr">
+
+
+VALLA kombinuje ručni rad,
+prirodne materijale i bezvremenski dizajn.
+
+<br><br>
+
+Svaka lampa je pažljivo izrađen komad
+koji prostoru daje toplinu, karakter i emociju.
+
+
+</p>
+
+
+
+
+<p class="story en hidden">
+
+
+VALLA combines craftsmanship,
+natural materials and timeless design.
+
+<br><br>
+
+Each lamp is carefully created to bring
+warmth, character and emotion into your space.
+
+
+</p>
+
+
+
+</section>
+
+
+
+
+
+
+
+<section id="collection">
+
+
+<h2 class="title">
+
+<span class="sr">
+Kolekcija
+</span>
+
+
+<span class="en hidden">
+Collection
+</span>
+
+
+</h2>
+
+
+
+
+
+<div class="products">
+
+
+
+<div class="card" onclick="showProduct('aura')">
+
+
+<img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5">
+
+
+<h3>
+Aura
+</h3>
+
+
+<p>
+
+<span class="sr">
+Prirodna elegancija
+</span>
+
+<span class="en hidden">
+Natural elegance
+</span>
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="card" onclick="showProduct('luna')">
+
+
+<img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15">
+
+
+<h3>
+Luna
+</h3>
+
+
+<p>
+
+<span class="sr">
+Minimalni luksuz
+</span>
+
+<span class="en hidden">
+Minimal luxury
+</span>
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card" onclick="showProduct('kyro')">
+
+
+<img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89">
+
+
+<h3>
+Kyro
+</h3>
+
+
+<p>
+
+<span class="sr">
+Skulpturalno svetlo
+</span>
+
+<span class="en hidden">
+Sculptural lighting
+</span>
+
+</p>
+
+
+</div>
+
+
+
+</div>
+<div id="aura" class="product">
+
+<img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5">
+
+<h2>Aura</h2>
+
+<p class="sr">
+
+<span class="gold">Ručno izrađena lampa od prirodnog drveta</span>
+
+<br><br>
+
+Inspirisana prirodnim oblicima i toplinom doma.
+
+<br><br>
+
+Materijal: prirodno drvo
+
+<br>
+Dimenzije: 45 × 25 cm
+
+<br>
+Cena: 180 €
+
+</p>
+
+
+<p class="en hidden">
+
+<span class="gold">Handcrafted natural wood lamp</span>
+
+<br><br>
+
+Inspired by natural forms and the warmth of home.
+
+<br><br>
+
+Material: natural wood
+
+<br>
+Dimensions: 45 × 25 cm
+
+<br>
+Price: 180 €
+
+</p>
+
+
+<a class="order" href="#contact">
+
+<span class="sr">Poruči Auru</span>
+<span class="en hidden">Order Aura</span>
+
+</a>
+
+</div>
+
+
+
+
+
+
+<div id="luna" class="product">
+
+<img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15">
+
+<h2>Luna</h2>
+
+<p class="sr">
+
+<span class="gold">Minimalistička luksuzna lampa</span>
+
+<br><br>
+
+Dizajnirana za moderne enterijere gde jednostavnost postaje elegancija.
+
+<br><br>
+
+Materijal: drvo i metal
+
+<br>
+Dimenzije: 50 × 30 cm
+
+<br>
+Cena: 220 €
+
+</p>
+
+
+<p class="en hidden">
+
+<span class="gold">Minimal luxury lamp</span>
+
+<br><br>
+
+Designed for modern interiors where simplicity becomes elegance.
+
+<br><br>
+
+Material: wood and metal
+
+<br>
+Dimensions: 50 × 30 cm
+
+<br>
+Price: 220 €
+
+</p>
+
+
+<a class="order" href="#contact">
+
+<span class="sr">Poruči Lunu</span>
+<span class="en hidden">Order Luna</span>
+
+</a>
+
+</div>
+
+
+
+
+
+
+<div id="kyro" class="product">
+
+<img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89">
+
+<h2>Kyro</h2>
+
+<p class="sr">
+
+<span class="gold">Skulpturalni komad svetla</span>
+
+<br><br>
+
+Jedinstvena lampa koja postaje centralni detalj prostora.
+
+<br><br>
+
+Materijal: ručno obrađeno drvo
+
+<br>
+Dimenzije: 60 × 35 cm
+
+<br>
+Cena: 320 €
+
+</p>
+
+
+<p class="en hidden">
+
+<span class="gold">Sculptural lighting piece</span>
+
+<br><br>
+
+A unique lamp designed to become the center of a space.
+
+<br><br>
+
+Material: handcrafted wood
+
+<br>
+Dimensions: 60 × 35 cm
+
+<br>
+Price: 320 €
+
+</p>
+
+
+<a class="order" href="#contact">
+
+<span class="sr">Poruči Kyro</span>
+<span class="en hidden">Order Kyro</span>
+
+</a>
+
+</div>
+
+</section>
+
+
+
+
+
+
+<section>
+
+<h2 class="title">
+
+<span class="sr">Izrada</span>
+<span class="en hidden">Craftsmanship</span>
+
+</h2>
+
+
+<div class="features">
+
+
+<div class="feature">
+
+<h3>Handmade</h3>
+
+<p class="sr">
+Svaka lampa je pažljivo ručno izrađena.
+</p>
+
+<p class="en hidden">
+Every lamp is carefully handcrafted.
+</p>
+
+</div>
+
+
+
+<div class="feature">
+
+<h3>Materials</h3>
+
+<p class="sr">
+Birani prirodni materijali sa karakterom.
+</p>
+
+<p class="en hidden">
+Selected natural materials with character.
+</p>
+
+</div>
+
+
+
+<div class="feature">
+
+<h3>Exclusive</h3>
+
+<p class="sr">
+Dizajniran komad za posebne enterijere.
+</p>
+
+<p class="en hidden">
+Designed pieces for exclusive interiors.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+<section id="contact">
+
+
+<h2 class="title">
+
+<span class="sr">Kontakt</span>
+<span class="en hidden">Contact</span>
+
+</h2>
+
+
+<p>
+
+<span class="sr">
+Za porudžbine i saradnju:
+</span>
+
+<span class="en hidden">
+For orders and collaborations:
+</span>
+
+<br><br>
+
+valla.lamps@gmail.com
+
+</p>
+
+
+</section>
+
+
+
+
+
+<footer>
+
+© 2026 VALLA Handmade Lighting Studio
+
+</footer>
+
+
+
+
+
+
+<script>
+
+
+function showProduct(id){
+
+let products=document.querySelectorAll(".product");
+
+
+products.forEach(function(item){
+
+item.style.display="none";
+
+});
+
+
+document.getElementById(id).style.display="block";
+
+
+window.location="#"+id;
+
+}
+
+
+
+
+function changeLanguage(lang){
+
+
+let sr=document.querySelectorAll(".sr");
+
+let en=document.querySelectorAll(".en");
+
+
+
+if(lang==="sr"){
+
+sr.forEach(function(item){
+
+item.classList.remove("hidden");
+
+});
+
+
+en.forEach(function(item){
+
+item.classList.add("hidden");
+
+});
+
+}
+
+
+
+if(lang==="en"){
+
+en.forEach(function(item){
+
+item.classList.remove("hidden");
+
+});
+
+
+sr.forEach(function(item){
+
+item.classList.add("hidden");
+
+});
+
+}
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
