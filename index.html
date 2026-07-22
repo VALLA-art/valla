@@ -4,98 +4,117 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VALLA | Handmade lampe</title>
+<title>VALLA | Handmade Lighting Studio</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: "Georgia", serif;
+    font-family:Georgia, serif;
 }
 
 body{
-    background:#f4efe7;
+    background:#f5efe6;
     color:#222;
 }
 
 header{
     height:90px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:0 8%;
-    background:#111;
+    background:#17130f;
     color:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 8%;
 }
 
 .logo{
-    font-size:32px;
-    letter-spacing:8px;
+    font-size:34px;
+    letter-spacing:10px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin-left:25px;
+    margin:0 12px;
 }
 
+.lang button{
+    background:transparent;
+    border:1px solid #c9a878;
+    color:#c9a878;
+    padding:7px 12px;
+    cursor:pointer;
+}
+
+
 .hero{
-    height:80vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
+    height:85vh;
     background:
     linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
     url("https://images.unsplash.com/photo-1507473885765-e6ed057f782c");
     background-size:cover;
     background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
     color:white;
 }
 
 .hero h1{
-    font-size:70px;
-    letter-spacing:15px;
+    font-size:80px;
+    letter-spacing:18px;
 }
 
 .hero p{
     font-size:22px;
-    margin:25px;
+    margin:30px;
 }
+
 
 .button{
-    display:inline-block;
-    padding:15px 35px;
-    background:#d6b98c;
-    color:#111;
+    background:#c9a878;
+    color:#17130f;
+    padding:15px 40px;
+    border-radius:40px;
     text-decoration:none;
-    border-radius:30px;
 }
 
-.section{
-    padding:70px 8%;
+
+section{
+    padding:80px 10%;
     text-align:center;
 }
 
-.section h2{
+h2{
     font-size:40px;
     margin-bottom:30px;
 }
 
+
 .products{
     display:flex;
-    gap:30px;
     justify-content:center;
+    gap:35px;
     flex-wrap:wrap;
 }
 
+
 .card{
-    background:white;
     width:300px;
-    padding-bottom:25px;
-    box-shadow:0 10px 30px #0002;
+    background:white;
+    cursor:pointer;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    transition:.3s;
 }
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
 
 .card img{
     width:100%;
@@ -103,100 +122,398 @@ nav a{
     object-fit:cover;
 }
 
+
 .card h3{
-    margin:15px;
+    font-size:28px;
+    margin:20px;
 }
 
+
 .card p{
+    padding-bottom:25px;
     color:#777;
 }
 
+
+
+.product-details{
+    display:none;
+    background:white;
+    padding:40px;
+    margin-top:50px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+
+.product-details img{
+    width:350px;
+    max-width:100%;
+}
+
+
+.product-details p{
+    line-height:1.8;
+    margin:25px;
+    font-size:18px;
+}
+
+
+.order{
+    display:inline-block;
+    background:#17130f;
+    color:white;
+    padding:15px 35px;
+    border-radius:30px;
+    text-decoration:none;
+}
+
+
+
 footer{
-    background:#111;
+    background:#17130f;
     color:white;
     text-align:center;
     padding:30px;
 }
-</style>
 
+
+.hidden{
+    display:none;
+}
+
+</style>
 </head>
 
 <body>
 
+
 <header>
+
 <div class="logo">VALLA</div>
 
 <nav>
-<a href="#">Početna</a>
-<a href="#kolekcija">Kolekcija</a>
-<a href="#kontakt">Kontakt</a>
+<a href="#collection">
+<span class="sr">Kolekcija</span>
+<span class="en hidden">Collection</span>
+</a>
+
+<a href="#contact">
+<span class="sr">Kontakt</span>
+<span class="en hidden">Contact</span>
+</a>
 </nav>
+
+
+<div class="lang">
+<button onclick="changeLanguage('sr')">SR</button>
+<button onclick="changeLanguage('en')">EN</button>
+</div>
+
 </header>
+
 
 
 <section class="hero">
 
 <div>
-<h1>VALLA</h1>
-<p>Ručno izrađene lampe koje oblikuju prostor</p>
 
-<a class="button" href="#kolekcija">
-Pogledaj kolekciju
+<h1>VALLA</h1>
+
+
+<p class="sr">
+Ručno izrađene lampe koje stvaraju atmosferu doma.
+</p>
+
+<p class="en hidden">
+Handcrafted lamps designed to create meaningful spaces.
+</p>
+
+
+<a class="button" href="#collection">
+
+<span class="sr">Istraži kolekciju</span>
+<span class="en hidden">Explore collection</span>
+
+</a>
+
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<h2>
+
+<span class="sr">Naša priča</span>
+<span class="en hidden">Our story</span>
+
+</h2>
+
+
+<p class="sr">
+VALLA kombinuje prirodne materijale,
+ručni rad i savremeni dizajn.
+<br><br>
+Naše lampe nisu samo izvor svetla,
+već detalj koji prostoru daje karakter.
+</p>
+
+
+<p class="en hidden">
+VALLA combines natural materials,
+craftsmanship and contemporary design.
+<br><br>
+Our lamps are not only sources of light,
+but pieces that give character to your space.
+</p>
+
+
+</section>
+
+
+
+
+<section id="collection">
+
+<h2>
+
+<span class="sr">Kolekcija</span>
+<span class="en hidden">Collection</span>
+
+</h2>
+
+
+<div class="products">
+
+
+<div class="products" id="products">
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+<div id="aura" class="product-details">
+
+<img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5">
+
+<h2>Aura</h2>
+
+<p class="sr">
+Materijal: prirodno drvo<br>
+Dimenzije: 45 × 25 cm<br>
+Cena: 180 €
+</p>
+
+<p class="en hidden">
+Material: natural wood<br>
+Dimensions: 45 × 25 cm<br>
+Price: 180 €
+</p>
+
+
+<a class="order" href="#contact">
+<span class="sr">Poruči</span>
+<span class="en hidden">Order</span>
 </a>
 
 </div>
 
-</section>
 
 
-<section class="section" id="kolekcija">
-
-<h2>Naša kolekcija</h2>
-
-<div class="products">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5">
-<h3>Lampa Aura</h3>
-<p>Prirodno drvo • Ručni rad</p>
-</div>
 
 
-<div class="card">
+<div id="luna" class="product-details">
+
 <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15">
-<h3>Lampa Luna</h3>
-<p>Minimalistički dizajn</p>
+
+<h2>Luna</h2>
+
+<p class="sr">
+Materijal: drvo i metal<br>
+Dimenzije: 50 × 30 cm<br>
+Cena: 220 €
+</p>
+
+<p class="en hidden">
+Material: wood and metal<br>
+Dimensions: 50 × 30 cm<br>
+Price: 220 €
+</p>
+
+
+<a class="order" href="#contact">
+<span class="sr">Poruči</span>
+<span class="en hidden">Order</span>
+</a>
+
 </div>
 
 
-<div class="card">
+
+
+
+<div id="kyro" class="product-details">
+
 <img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89">
-<h3>Lampa Forma</h3>
-<p>Jedinstveni komad</p>
-</div>
+
+<h2>Kyro</h2>
+
+<p class="sr">
+Materijal: ručno obrađeno drvo<br>
+Dimenzije: 60 × 35 cm<br>
+Cena: 320 €
+</p>
+
+<p class="en hidden">
+Material: handcrafted wood<br>
+Dimensions: 60 × 35 cm<br>
+Price: 320 €
+</p>
+
+
+<a class="order" href="#contact">
+<span class="sr">Poruči</span>
+<span class="en hidden">Order</span>
+</a>
 
 </div>
+
 
 </section>
 
 
-<section class="section" id="kontakt">
 
-<h2>Kontakt</h2>
+
+<section id="contact">
+
+<h2>
+
+<span class="sr">Kontakt</span>
+<span class="en hidden">Contact</span>
+
+</h2>
+
 
 <p>
-Za porudžbine i pitanja:
-<br>
 valla.lamps@gmail.com
 </p>
 
+
 </section>
 
 
+
+
 <footer>
-© 2026 VALLA Handmade Lamps
+
+VALLA Handmade Lighting Studio
+
 </footer>
 
+
+
+<script>
+
+
+function changeLanguage(lang){
+
+let sr=document.querySelectorAll(".sr");
+let en=document.querySelectorAll(".en");
+
+
+if(lang==="sr"){
+
+sr.forEach(x=>x.classList.remove("hidden"));
+en.forEach(x=>x.classList.add("hidden"));
+
+}
+
+else{
+
+en.forEach(x=>x.classList.remove("hidden"));
+sr.forEach(x=>x.classList.add("hidden"));
+
+}
+
+}
+
+
+
+function showProduct(id){
+
+document.querySelectorAll(".product-details")
+.forEach(x=>x.style.display="none");
+
+
+document.getElementById(id).style.display="block";
+
+
+window.location="#"+id;
+
+}
+
+
+
+window.onload=function(){
+
+if(navigator.language.startsWith("sr")){
+changeLanguage("sr");
+}
+else{
+changeLanguage("en");
+}
+
+};
+
+
+</script>
+
+<script>
+
+fetch("proizvodi.json")
+.then(response => response.json())
+.then(proizvodi => {
+
+let prostor =
+document.getElementById("products");
+
+
+proizvodi.forEach(p => {
+
+
+prostor.innerHTML += `
+
+<div class="card">
+
+<img src="${p.slika}">
+
+<h3>${p.ime}</h3>
+
+<p>${p.opis}</p>
+
+<strong>${p.cena}</strong>
+
+</div>
+
+`;
+
+
+});
+
+
+});
+
+
+</script>
 
 </body>
 </html>
